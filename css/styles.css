@@ -295,7 +295,7 @@ img {
 }
 
 .features-card {
-  flex-basis: calc((100%-72px) / 4);
+  flex-basis: 264px;
 }
 
 .features-card-image {
@@ -533,7 +533,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--white-color);
+  color: #ffffff;
 
   margin-bottom: 16px;
 }
@@ -549,6 +549,11 @@ img {
   height: 40px;
   padding: 8px 16px;
 
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -561,19 +566,19 @@ img {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: var(--white-color);
+  color: #ffffff;
 }
 
 .subscribe-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
 
+  border: none;
   background-color: var(--logo-color);
   border-radius: 4px;
   border-color: transparent;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
 
   font-style: normal;
@@ -582,10 +587,12 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-color);
+  cursor: pointer;
 }
 
 .subscribe-button-icon {
   fill: var(--white-color);
+  margin-left: 16px;
 }
 /* ============== / MAIN PAGE =================== */
 
@@ -803,7 +810,7 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 
@@ -816,6 +823,7 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   outline: transparent;
+  background-color: transparent;
 
   padding-left: 38px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -852,7 +860,14 @@ img {
   padding: 8px 16px;
   resize: none;
 
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  background-color: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -866,7 +881,7 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
@@ -876,16 +891,16 @@ img {
   margin-bottom: 24px;
 }
 
-.policy-text {
+.checkbox-label {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
 
-.policy-text a {
+.policy-link {
   font-family: inherit;
   color: #4d5ae5;
 }
@@ -896,10 +911,13 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   background-color: var(--white-color);
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-label {
   display: flex;
@@ -909,8 +927,8 @@ img {
 
 .checkbox:checked + .checkbox-label .checkbox-designed {
   background-color: var(--accent-color);
-  border-color: #404bbf;
-  fill: #f4f4fd;
+  border: none;
+  fill: var(--white-color);
 }
 
 /* MODAL SUBMIT BUTTON */
@@ -932,6 +950,12 @@ img {
   color: var(--white-color);
   background-color: var(--logo-color);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit-button:hover,
+.modal-submit-button:focus {
+  background-color: var(--accent-color);
 }
 
 /* ============= / MODAL WINDOW ===============  */
