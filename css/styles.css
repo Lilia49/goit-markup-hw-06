@@ -414,7 +414,7 @@ img {
 }
 
 .cutomer-list-card {
-  flex-basis: calc((100%-120px) / 6);
+  flex-basis: 168px;
   height: 88px;
 }
 
